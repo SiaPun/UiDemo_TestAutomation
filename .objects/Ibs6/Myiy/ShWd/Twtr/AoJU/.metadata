@@ -1,0 +1,14 @@
+﻿{
+  "Id": "AoJU9D-Q_k-bShcLa32daA",
+  "Reference": "RgQ9hY3RikS6aU7T9XLHuw/AoJU9D-Q_k-bShcLa32daA",
+  "ParentRef": "RgQ9hY3RikS6aU7T9XLHuw/TwtrCfo9QEWUlMjegkp9CQ",
+  "Name": "Click 'Cash In'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2024-07-01T06:45:07.2995964Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.4.5.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-07-01T06:45:07.2995964Z"
+}

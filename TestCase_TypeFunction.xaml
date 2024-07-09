@@ -1,0 +1,279 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" this:TestCase.in_decOnUsCheck="0" this:TestCase.in_decNotOnUsCheck="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_decCashIn" Type="InArgument(x:Decimal)" />
+    <x:Property Name="in_decOnUsCheck" Type="InArgument(x:Decimal)" />
+    <x:Property Name="in_decNotOnUsCheck" Type="InArgument(x:Decimal)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1393.3333333333333,2471.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TestCaseDiscoReportGeneration_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Text.Json</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="104">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Text.Encoding.CodePages</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="TestCase respecting the BDD template with the execution template attached." DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="754,2406.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Decimal" Name="decCashIn" />
+      <Variable x:TypeArguments="x:Decimal" Name="decOnUsCheck" />
+      <Variable x:TypeArguments="x:Decimal" Name="decNotOnUsCheck" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Set-up of test:&#xA;Bring the application in a desired state&#xA;- Login&#xA;- Navigate to a specific page" DisplayName="... Given" sap:VirtualizedContainerService.HintSize="692,716" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Run GivenMessage" sap:VirtualizedContainerService.HintSize="388,93.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Run Given&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UiDemo\S0011_Open UiDemo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UiDemo\S0011_Open UiDemo.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="388,90.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UiDemo\S0012_Login UiDemo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="UiDemo\S0012_Login UiDemo.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Run the STR (Steps To Reproduce) of the test:&#xA;- Actual test steps" DisplayName="... When" sap:VirtualizedContainerService.HintSize="692,400.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Run When Message" sap:VirtualizedContainerService.HintSize="388,93.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Run When&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UiDemo\S0013_DataType.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="UiDemo\S0013_DataType.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:Decimal" x:Key="in_decCashIn">
+            <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="in_decCashIn" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Decimal" x:Key="in_decOnUsCheck">
+            <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="in_decOnUsCheck" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:Decimal" x:Key="in_decNotOnUsCheck">
+            <VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="in_decNotOnUsCheck" />
+          </InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Verify output and results:&#xA;- Check if the STR (Steps To Reproduce) had the desired effect&#xA;- Final Asserts&#xA;- Determine final test PASS/FAIL criteria" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="692,1068.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Run Then Message" sap:VirtualizedContainerService.HintSize="630,93.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Run Then&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="UiDemo 主要畫面" sap:VirtualizedContainerService.HintSize="630,751.3333333333334" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596,418.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="bVerify" />
+                <Variable x:TypeArguments="x:String" Name="s" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Total deposit Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="534,308" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_5" Operator="Equality" OutputArgument="TextString" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+                <uta:VerifyControlAttribute.ActivityToTest>
+                  <ActivityAction>
+                    <uix:NGetText DisplayName="Get Text 'Total deposit'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V3">
+                      <uix:NGetText.OutUiElement>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <VariableReference x:TypeArguments="ui:UiElement">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="ui:UiElement" Name="_autogenerated_OutUiElement" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NGetText.OutUiElement>
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable CvType="AnyWordGroup" DesignTimeRectangle="619, 521, 75, 24" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'$226.00'" FullSelectorArgument="&lt;ctrl automationid='TotalLB' /&gt;&lt;ctrl name='$226.00' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='TotalLB' /&gt;&lt;ctrl role='text' automationid='' /&gt;" Guid="feaf4169-b7c5-449e-be83-ecbed73eb731" InformativeScreenshot="a9eb1fc8bab177ff086e5c53c998e3e4.png" ScopeSelectorArgument="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UIDemo' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Total deposit" CvType="Text" DesignTimeRectangle="337, 521, 117, 24" ElementType="Text" FriendlyName="'Total deposit'" FullSelectorArgument="&lt;ctrl name='Total deposit' role='text' /&gt;&lt;ctrl name='Total deposit' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Total deposit' role='text' /&gt;&lt;ctrl name='Total deposit' role='text' automationid='' check:text='Total deposit' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <uix:NGetText.TextString>
+                        <OutArgument x:TypeArguments="x:String">
+                          <VariableReference x:TypeArguments="x:String">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="x:String" x:Name="__ReferenceID0" Name="_autogenerated_TextString" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NGetText.TextString>
+                      <uix:NGetText.WordsInfo>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)">
+                          <VariableReference x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)">
+                            <VariableReference.Variable>
+                              <Variable x:TypeArguments="scg:IEnumerable(uuam:NWordInfo)" Name="_autogenerated_WordsInfo" />
+                            </VariableReference.Variable>
+                          </VariableReference>
+                        </OutArgument>
+                      </uix:NGetText.WordsInfo>
+                    </uix:NGetText>
+                  </ActivityAction>
+                </uta:VerifyControlAttribute.ActivityToTest>
+                <uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                  <ActivityFunc x:TypeArguments="x:Object">
+                    <uta:ArgumentsBridge sap2010:WorkflowViewState.IdRef="ArgumentsBridge_8">
+                      <uta:ArgumentsBridge.Input>
+                        <InArgument x:TypeArguments="x:Object">
+                          <VariableValue x:TypeArguments="x:Object" Variable="{x:Reference __ReferenceID0}" />
+                        </InArgument>
+                      </uta:ArgumentsBridge.Input>
+                    </uta:ArgumentsBridge>
+                  </ActivityFunc>
+                </uta:VerifyControlAttribute.ArgumentsBridgeActivity>
+                <uta:VerifyControlAttribute.Expression>
+                  <InArgument x:TypeArguments="x:String">["$"+(decCashIn+decNotOnUsCheck+decOnUsCheck).ToString]</InArgument>
+                </uta:VerifyControlAttribute.Expression>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uta:VerifyControlAttribute>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" ContentHash="qLga2-9XVUm2wPlPxLIfRQ" FilePath="C:\RPA\UiDemo\uidemo.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGqSURBVGhD7ZbLSsNQEIaDIoqiiKL4qN7vXQhdCwGXgvgaIr5Cm7jvA6RJL9mMnZKRtBnTczqDPYHzw0cDLe33/+csGvj4+Pj4+FBaT21oAoVuNdyH/5uPz68pdc+FbjX0Javk9e19St1zoVsNvtnr9ZxmYYE8z51gPB7PMBqNpohPgPsxbf6SVysQnHbEzEsTdfLGBZ7Dl9/XMuUCJ61vOH6M4eghhsP7GA7uYti/jWDvJoLdCTvXEWxfRbB12YXNCRsXXVg/78Da2WyBMAyNQPnhcKh3AhJ57gQWLY/yqgUk8uUC3NocVgVMrpBEvlzAdHmrAnVQAYk8QvLc2hzqBSTyiO3yyGAw0LtCEnmExLm1OVDeuEAdVEAij9gur15AIo+QPLc2h1UBkyskkUdsl0eyLNM7AYk8QuLc2hwor1pAIo/YLm9VwOQKSeQRkufW5lA/AYk8Mr86Urc8kqapXgGJPELS3NoIJ69aQIrt8s4WsJF3roCtfL/fd6fAMvLOFjCVVytA0B+yZf+Y2cqrFliFvFqBVcknSbK4QBModH18fHx8fJqeIPgBPjTp718TAqUAAAAASUVORK5CYII=" InformativeScreenshot="3a296a683518083332c57866b59791f8.png" Reference="RgQ9hY3RikS6aU7T9XLHuw/ShWdbhzdvESK1IfnjoS6IA" Selector="&lt;wnd app='uidemo.exe' cls='HwndWrapper*' title='UIDemo' /&gt;" Title="UIDemo" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "mCi-aeYpm0W8NcK4VuCk3Q",
+  "Reference": "RgQ9hY3RikS6aU7T9XLHuw/mCi-aeYpm0W8NcK4VuCk3Q",
+  "ParentRef": "RgQ9hY3RikS6aU7T9XLHuw/ShWdbhzdvESK1IfnjoS6IA",
+  "Name": "Total deposit",
+  "Type": "Element",
+  "TaxonomyType": "Listbox",
+  "Created": "2024-07-01T06:43:40.7393437Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-07-01T06:43:40.7393437Z"
+}

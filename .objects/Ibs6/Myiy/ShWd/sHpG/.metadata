@@ -1,0 +1,13 @@
+﻿{
+  "Id": "sHpGUwDn4kqZKVmQv9PSAg",
+  "Reference": "RgQ9hY3RikS6aU7T9XLHuw/sHpGUwDn4kqZKVmQv9PSAg",
+  "ParentRef": "RgQ9hY3RikS6aU7T9XLHuw/ShWdbhzdvESK1IfnjoS6IA",
+  "Name": "On Us Check",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2024-07-01T06:43:40.6831381Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2024-07-01T06:43:40.6831381Z"
+}

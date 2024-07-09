@@ -1,0 +1,9 @@
+{
+  "issueKeyTestcaseValues": {},
+  "testManagerBasePath": "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/testmanager_/",
+  "defaultProject": {
+    "id": "16d807f0-2c02-0000-16fc-0b46fb1b9b6a",
+    "name": "UiDemo_TestAuto_240701",
+    "key": "UIDEMO"
+  }
+}
