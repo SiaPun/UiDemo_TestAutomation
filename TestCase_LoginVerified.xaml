@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="753.3333333333334,1618.6666666666667" sap2010:WorkflowViewState.IdRef="TestCaseDiscoReportGeneration_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1097.3333333333333,2807.3333333333335" sap2010:WorkflowViewState.IdRef="TestCaseDiscoReportGeneration_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>GlobalConstantsNamespace</x:String>
@@ -26,6 +26,7 @@
       <x:String>System.Drawing</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -85,16 +86,17 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="TestCase respecting the BDD template with the execution template attached." DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="512,1554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="TestCase respecting the BDD template with the execution template attached." DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="754,2742.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Set-up of test:&#xA;Bring the application in a desired state&#xA;- Login&#xA;- Navigate to a specific page" DisplayName="... Given" sap:VirtualizedContainerService.HintSize="450,562" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Set-up of test:&#xA;Bring the application in a desired state&#xA;- Login&#xA;- Navigate to a specific page" DisplayName="... Given" sap:VirtualizedContainerService.HintSize="692,562" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,7 +118,7 @@
       </ui:InvokeWorkflowFile>
       <Delay Duration="00:00:07" sap:VirtualizedContainerService.HintSize="388,90.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_1" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Run the STR (Steps To Reproduce) of the test:&#xA;- Actual test steps" DisplayName="... When" sap:VirtualizedContainerService.HintSize="450,400.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Run the STR (Steps To Reproduce) of the test:&#xA;- Actual test steps" DisplayName="... When" sap:VirtualizedContainerService.HintSize="692,400.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,21 +139,21 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verify output and results:&#xA;- Check if the STR (Steps To Reproduce) had the desired effect&#xA;- Final Asserts&#xA;- Determine final test PASS/FAIL criteria" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="450,370" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Verify output and results:&#xA;- Check if the STR (Steps To Reproduce) had the desired effect&#xA;- Final Asserts&#xA;- Determine final test PASS/FAIL criteria" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="692,1558.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Run Then Message" sap:VirtualizedContainerService.HintSize="388,93.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Run Then&quot;]" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="UiDemo 主要畫面" sap:VirtualizedContainerService.HintSize="388,52.666666666666664" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V2">
+      <ui:LogMessage DisplayName="Run Then Message" sap:VirtualizedContainerService.HintSize="630,93.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Run Then&quot;]" />
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="UiDemo 主要畫面" sap:VirtualizedContainerService.HintSize="630,1241.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,446.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596,908.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="bVerify" />
                 <Variable x:TypeArguments="x:String" Name="s" />
@@ -161,10 +163,10 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Cash In Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="388,52.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Cash In Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="534,514.6666666666666" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_2" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                 <uta:VerifyControlAttribute.ActivityToTest>
                   <ActivityAction>
-                    <uix:NCheckState DisplayName="Check App State 'Check App State 'Cash In''" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="222.66666666666666,52.666666666666664" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Check App State 'Cash In''" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,364.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V3">
                       <uix:NCheckState.Exists>
                         <OutArgument x:TypeArguments="x:Boolean">
                           <VariableReference x:TypeArguments="x:Boolean">
@@ -212,7 +214,7 @@
                       </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -235,12 +237,12 @@
                 </uta:VerifyControlAttribute.Expression>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uta:VerifyControlAttribute>
-              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="On Us Check Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="388,52.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_3" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="On Us Check Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="534,52.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_3" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                 <uta:VerifyControlAttribute.ActivityToTest>
                   <ActivityAction>
                     <uix:NCheckState DisplayName="Check App State 'On Us Check'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,364.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V3">
@@ -319,7 +321,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uta:VerifyControlAttribute>
-              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Not On Us Check Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="388,52.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_4" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
+              <uta:VerifyControlAttribute AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Not On Us Check Verify 單項欄位驗證" sap:VirtualizedContainerService.HintSize="534,52.666666666666664" sap2010:WorkflowViewState.IdRef="VerifyControlAttribute_4" Operator="Equality" OutputArgument="Exists" TakeScreenshotInCaseOfFailingAssertion="True" TakeScreenshotInCaseOfSucceedingAssertion="False">
                 <uta:VerifyControlAttribute.ActivityToTest>
                   <ActivityAction>
                     <uix:NCheckState DisplayName="Check App State 'Not On Us Check'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,324.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="27b9ab22-981a-4104-8fed-6dec06985cbf" Version="V3">
@@ -485,7 +487,7 @@
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
