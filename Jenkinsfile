@@ -1,6 +1,16 @@
 pipeline {
   agent any
+  environment {
+    ORCHESTRATOR_ADDRESS = "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/orchestrator_/"
+    ORCHESTRATOR_TENANT = "PRDTenant"
+    CREDENTIALS_ID = "2639310"
+  }
   stages {
+    stage('Checkout') {
+      steps {
+        git branch: 'main', url: 'https://github.com/SiaPun/UiDemo_TestAutomation'
+      }
+    }
     stage('Build') {
       steps {
         UiPathPack (
@@ -8,21 +18,21 @@ pipeline {
           projectJsonPath: "UiDemo_TestAutomation\\project.json",
           version: [$class: 'ManualVersionEntry', version: "1.0.${env.BUILD_NUMBER}"],
           useOrchestrator: true,
-          orchestratorAddress: "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/orchestrator_/",
-          orchestratorTenant: "PRDTenant",
-          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "2639310"]
+          orchestratorAddress: "${env.ORCHESTRATOR_ADDRESS}",
+          orchestratorTenant: "${env.ORCHESTRATOR_TENANT}",
+          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"]
         )
       }
     }
     stage('Deploy') {
       steps {
         UiPathDeploy (
-          packagePath: "Output\\${env.BUILD_NUMBER}\\UiDemo_TestAutomation.nupkg",
-          orchestratorAddress: "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/orchestrator_/",
-          orchestratorTenant: "PRDTenant",
-          folderName: "UiDemo_TestAutomation",  // 這裡填入你的現代文件夾名稱
-          environments: "Testing",  // 根據你的需要設置環境名稱
-          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "2639310"],
+          packagePath: "Output\\${env.BUILD_NUMBER}\\YourPackage.nupkg",
+          orchestratorAddress: "${env.ORCHESTRATOR_ADDRESS}",
+          orchestratorTenant: "${env.ORCHESTRATOR_TENANT}",
+          folderName: "UiDemo_TestAutomation",
+          environments: "Testing",
+          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"],
           traceLoggingLevel: 'None'
         )
       }
@@ -32,14 +42,12 @@ pipeline {
         UiPathRunTests (
           target: "Execute test set",
           testSet: "UIDEMO:3",
-          orchestratorAddress: "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/orchestrator_/",
-          orchestratorTenant: "PRDTenant",
-          folderName: "UiDemo_TestAutomation",  // 這裡填入你的現代文件夾名稱
-          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "2639310"]
+          orchestratorAddress: "${env.ORCHESTRATOR_ADDRESS}",
+          orchestratorTenant: "${env.ORCHESTRATOR_TENANT}",
+          folderName: "UiDemo_TestAutomation",
+          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"]
         )
       }
     }
   }
 }
-
-
