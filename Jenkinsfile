@@ -1,9 +1,9 @@
 pipeline {
   agent any
   environment {
-    ORCHESTRATOR_ADDRESS = "https://cloud.uipath.com/galaxysoftwareservice/PRDTenant/orchestrator_/"
-    ORCHESTRATOR_TENANT = "PRDTenant"
-    CREDENTIALS_ID = "2639310"
+    ORCHESTRATOR_ADDRESS = "https://cloud.uipath.com/galaxysoftwareservice/UATTenant/orchestrator_/"
+    ORCHESTRATOR_TENANT = "UATTenant"
+    CREDENTIALS_ID = "UiPath_UAT_APIAccess"
   }
   stages {
     stage('Checkout') {
