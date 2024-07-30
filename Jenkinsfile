@@ -18,6 +18,7 @@ pipeline {
           projectJsonPath: "UiDemo_TestAutomation\\project.json",
           version: [$class: 'ManualVersionEntry', version: "1.0.${env.BUILD_NUMBER}"],
           useOrchestrator: true,
+          traceLevel: 'None',
           orchestratorAddress: "${env.ORCHESTRATOR_ADDRESS}",
           orchestratorTenant: "${env.ORCHESTRATOR_TENANT}",
           credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"]
@@ -33,7 +34,7 @@ pipeline {
           folderName: "UiDemo_TestAutomation",
           environments: "Testing",
           credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"],
-          traceLoggingLevel: 'None'
+          traceLevel: 'None'
         )
       }
     }
