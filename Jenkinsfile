@@ -28,12 +28,14 @@ pipeline {
     stage('Deploy') {
       steps {
         UiPathDeploy (
-          packagePath: "Output\\${env.BUILD_NUMBER}\\YourPackage.nupkg",
+          packagePath: "Output\\${env.BUILD_NUMBER}\\UiDemo_TestAutomation.${env.BUILD_NUMBER}.nupkg",
           orchestratorAddress: "${env.ORCHESTRATOR_ADDRESS}",
           orchestratorTenant: "${env.ORCHESTRATOR_TENANT}",
           folderName: "UiDemo_TestAutomation",
           environments: "Testing",
           credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "${env.CREDENTIALS_ID}"],
+          entryPointPaths: "Main.xaml",  // 请确认此路径是否正确
+          createProcess: true,
           traceLevel: 'None'
         )
       }
